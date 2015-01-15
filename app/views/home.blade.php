@@ -33,9 +33,9 @@
 				<p class="col-xs-8">
 					{{ $task->text }}
 				</p>
-				<div class="bouttons col-xs-4">
+				<div class="bouttons">
 					{{ Form::open(['class'=>'form', 'method' => 'delete','action' => ['TasksController@destroy', $task->id]]) }}
-						<button type="submit" class="btn btn-xl btn-danger square left">
+						<button type="submit" class="btn btn-danger square col-md-1 col-xs-2">
 							 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 						</button>
 					{{ Form::close() }}	
