@@ -30,8 +30,8 @@
 	  <div class="container">
 		<p>Ajouter une tâche à ma liste:</p>
 		{{ Form::open(['url' => '/tasks','class'=>'form-inline']) }}
-		{{ Form::text('tache', null,['placeholder'=>'Saisissez votre tâche ici','class'=>'col-md-9 input-lg square']);}}
-		{{ Form::submit('Ajouter',['class'=>'btn btn-lg col-md-3 square']);}}
+		{{ Form::text('tache', null,['placeholder'=>'Saisissez votre tâche ici','class'=>'col-xs-12 col-md-8 input-lg square']);}}
+		{{ Form::submit('Ajouter',['class'=>'btn btn-lg col-xs-12 col-md-offset-1 col-md-3 square']);}}
 		{{ Form::close() }}
 	  </div>
 	</div>
@@ -43,6 +43,7 @@
 		  <h2>A faire</h2>
 		  	@yield('faire')
 		</div>
+
 		<div class="col-md-6">
 		  <h2>Fait</h2>
 		 	@yield('fait')

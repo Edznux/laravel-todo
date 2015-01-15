@@ -12,6 +12,7 @@ class TasksController extends BaseController {
 	public function store(){
 		// insert dans la bdd avec uniquement le champ "text", les autre sont par default (id auto incrémenté et "done" = 0 par default)
 		DB::table('tasks')->insert(["text" => Input::get("tache")]);
+		// return Input::get("tache");
 		return Redirect::to("/");
 	}
 

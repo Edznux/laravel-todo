@@ -4,9 +4,9 @@
 .jumbotron{
 	margin-top: 40px;
 }
-.form{
-
+.btn{
+	border: 1px solid #000 !important;
 }
-.boutton{
-
+.left{
+	float:left;
 }

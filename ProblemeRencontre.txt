@@ -6,4 +6,6 @@
 -Refontes des Routes pour utilisé '::resources'
 
 -Utilisation de requete REST (PUT et DELETE) dans des forms ou utilisation de lien (pour le delete de taches)
-	=> Vaut-il mieu utilisé des formulaire pour chaques bouttons OU utilisé des lien (pour le DELETE et PUT)
+	=> Vaut-il mieu utilisé des formulaire pour chaques bouttons OU utilisé des liens (pour le DELETE et PUT)
+	=> les formulaires permette de géré les faille csrf
+	donc utilisation de ceux ci.
