@@ -4,18 +4,31 @@
 	@foreach ($tasks as $task)
 	<p>
 		{{ $task->text }}
-		  <input type="checkbox"/>
-		  <input type="checkbox"/>
+
+		{{ Form::open(array('url' => "/tasks/$task->id")) }}
+		  <button type="submit" class="btn btn-xl btn-default">
+			 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+		</button>
+		{{ Form::close() }}
+		{{ Form::open(array('url' => "/tasks/$task->id/delete")) }}
+		<button type="submit" class="btn btn-xl btn-default">
+			 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+		{{ Form::close() }}
 	</p>
 	@endforeach
 @stop
 
 @section('fait')
-	@foreach ($tasks as $task)
+	@foreach ($tasksDone as $task)
 	<p>
 		{{ $task->text }}
-		  <input type="checkbox"/>
-		  <input type="checkbox"/>
+		{{ $task->id }}
+		{{ Form::open(array('url' => "/tasks/$task->id/delete")) }}
+		<button type="submit" class="btn btn-xl btn-default">
+			 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+		{{ Form::close() }}
 	</p>
 	@endforeach
 @stop

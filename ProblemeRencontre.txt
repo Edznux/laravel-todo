@@ -1,1 +1,7 @@
-Inclusion des formulaire avec bootstrap (pas de gestion des classes simple).
+
+-Inclusion des formulaires avec bootstrap (pas de gestion des classes simple).
+
+-Pas sur d'utilisé la meilleure méthode pour gérer les tâches a faire/faite
+
+		$tasks= Task::where("done","=",0)->get();
+		$tasksDone = Task::where("done","=",1)->get();

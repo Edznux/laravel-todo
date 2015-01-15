@@ -20,5 +20,6 @@ Route::get('/', "TasksController@index"); //index
 /*
 *POST
 */
+Route::post('/tasks/{id}/delete', "TasksController@del");//suprime une tâche spécifique
 Route::post('/tasks/{id}', "TasksController@edit");	//modifier une tâche spécifique
 Route::post('/tasks', "TasksController@add");		//ajouter une tâche
