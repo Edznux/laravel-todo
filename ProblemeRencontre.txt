@@ -1,7 +1,9 @@
 
--Inclusion des formulaires avec bootstrap (pas de gestion des classes simple).
+-Inclusion des formulaires avec bootstrap (pas de gestion des classes simple) (avec icones...)
 
 -Pas sur d'utilisé la meilleure méthode pour gérer les tâches a faire/faite
 
-		$tasks= Task::where("done","=",0)->get();
-		$tasksDone = Task::where("done","=",1)->get();
+-Refontes des Routes pour utilisé '::resources'
+
+-Utilisation de requete REST (PUT et DELETE) dans des forms ou utilisation de lien (pour le delete de taches)
+	=> Vaut-il mieu utilisé des formulaire pour chaques bouttons OU utilisé des lien (pour le DELETE et PUT)

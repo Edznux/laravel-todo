@@ -10,6 +10,8 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -18,8 +20,8 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Ma Todo list</a>
-				<a class="" href="#">A faire</a>
-				<a class="" href="#">Fait </a>
+				<a class="navbar-text" href="#">A faire</a>
+				<a class="navbar-text" href="#">Fait </a>	
 			</div>
 		</div>
 	</nav>
@@ -27,12 +29,9 @@
 	<div class="jumbotron">
 	  <div class="container">
 		<p>Ajouter une tâche à ma liste:</p>
-		{{ Form::open(array('url' => '/tasks')) }}
-			<?php
-				echo Form::token();
-				echo Form::text('tache');
-				echo Form::submit('Ajouter');
-			?>
+		{{ Form::open(['url' => '/tasks','class'=>'form-inline']) }}
+		{{ Form::text('tache', null,['placeholder'=>'Saisissez votre tâche ici','class'=>'col-md-9 input-lg square']);}}
+		{{ Form::submit('Ajouter',['class'=>'btn btn-lg col-md-3 square']);}}
 		{{ Form::close() }}
 	  </div>
 	</div>
