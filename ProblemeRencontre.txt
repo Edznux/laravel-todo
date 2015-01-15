@@ -1,0 +1,1 @@
+Inclusion des formulaire avec bootstrap (pas de gestion des classes simple).
