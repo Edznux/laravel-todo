@@ -31,6 +31,6 @@
 * DELETE
 */
 // Route::delete('/tasks/{id}', "TasksController@del"); //suprime une tâche spécifique
-
+Route::when('*','csrf',['POST','PUT','DELETE']); // gestion du csrf dans les requete "critique (celle de modification)"
 Route::get('/','TasksController@index');
 Route::resource('/tasks','TasksController');

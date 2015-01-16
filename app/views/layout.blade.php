@@ -19,36 +19,39 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Ma Todo list</a>
-				<a class="navbar-text" href="#">A faire</a>
-				<a class="navbar-text" href="#">Fait </a>	
+				<a class="navbar-brand" href="/">Ma Todo list</a>
+				<a class="navbar-text" href="#" onclick="hide('faire');">A faire</a>
+				<a class="navbar-text" href="#" onclick="hide('fait');">Fait </a>
 			</div>
 		</div>
 	</nav>
 
 	<div class="jumbotron">
 	  <div class="container">
+		@if($errors->has("text"))
+			<div class="alert alert-danger">La tâche doit faire un minimum de 8 caractères</div>
+		@endif
 		<p>Ajouter une tâche à ma liste:</p>
 		{{ Form::open(['url' => '/tasks','class'=>'form-inline']) }}
-		{{ Form::text('tache', null,['placeholder'=>'Saisissez votre tâche ici','class'=>'col-xs-12 col-md-8 input-lg square']);}}
+		{{ Form::text('text', null,['placeholder'=>'Saisissez votre tâche ici','class'=>'col-xs-12 col-md-8 input-lg square']);}}
 		{{ Form::submit('Ajouter',['class'=>'btn btn-lg col-xs-12 col-md-offset-1 col-md-3 square']);}}
 		{{ Form::close() }}
 	  </div>
 	</div>
 
 	<div class="container">
-
 	  <div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6" id="faire">
 		  <h2>A faire</h2>
 		  	@yield('faire')
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-6" id="fait">
 		  <h2>Fait</h2>
 		 	@yield('fait')
 	   </div>
 	  </div>
 	</div>
+	<script src="/js/main.js"></script>
   </body>
 </html>

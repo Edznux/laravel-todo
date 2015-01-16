@@ -4,12 +4,12 @@
 	@foreach ($tasks as $task)
 		@if($task->done == 0)
 		<div class="tache">
-			<div class="bouttons">
-				<p class="col-xs-8">
-					{{ $task->text }}
-				</p>
+			<p class="col-xs-8">
+				{{ $task->text }}
+			</p>
+			<div class="">
 				{{Form::open(['class' => 'form', 'method' => 'put', 'action' => ['TasksController@update', $task->id]])}}
-			  	<button type="submit" class="btn btn-success square col-md-1 col-xs-2" bouttons>
+			  	<button type="submit" class="btn btn-success square col-md-1 col-xs-2">
 					 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
 				</button>
 				{{ Form::close() }}
@@ -33,7 +33,7 @@
 				<p class="col-xs-8">
 					{{ $task->text }}
 				</p>
-				<div class="bouttons">
+				<div class="">
 					{{ Form::open(['class'=>'form', 'method' => 'delete','action' => ['TasksController@destroy', $task->id]]) }}
 						<button type="submit" class="btn btn-danger square col-md-1 col-xs-2">
 							 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
