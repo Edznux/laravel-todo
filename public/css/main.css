@@ -4,6 +4,40 @@
 .jumbotron{
 	margin-top: 40px;
 }
-.btn{
-	border: 1px solid #000 !important;
+.tache .btn {
+	width: 100%;
+}
+.tache {
+	margin: 10px;
+	background-color: #EEE;
+}
+ .tache-text{
+    padding: 15px 0px;
+}
+.tache-button{
+    width: 100px;
+    float: right;
+    text-align: right;
+    padding: 15px 0px;
+}
+ 
+.tache-button:after {
+	clear:both;
+}
+#faire{
+	border-right: 1px solid #000;
+}
+.btn-success{
+	border: 3px solid green !important;
+	border-radius: 5px !important;
+	width: 38px !important;
+	background: white !important;
+	color: green !important;
+}
+.btn-danger{
+	border: 3px solid red !important;
+	border-radius: 5px !important;
+	width: 38px !important;
+	background: white !important;
+	color: red !important;
 }

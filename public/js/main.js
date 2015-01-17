@@ -1,14 +1,16 @@
 function hide(type){
+	var fait = document.getElementById("fait");
+	var faire = document.getElementById("faire");
 	switch(type){
 		case 'fait':
-			document.getElementById("fait").style.display="block";
-			document.getElementById("fait").className="col-md-12";
-			document.getElementById("faire").style.display="none";
+			fait.style.display="block";
+			fait.className="col-md-12";
+			faire.style.display="none";
 		break;
 		case 'faire':
-			document.getElementById("faire").style.display="block";
-			document.getElementById("faire").className="col-md-12";
-			document.getElementById("fait").style.display="none";
+			faire.style.display="block";
+			faire.className="col-md-12";
+			fait.style.display="none";
 		break;
 	}
 }
